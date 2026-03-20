@@ -1,0 +1,29 @@
+ALDRIVE USER-SIDE FIXES
+
+Included fixes:
+1. New accounts now show zero donation stats by default.
+2. Existing user donations and statuses are pulled from the database and shown in Dashboard > My Donations.
+3. Regular user login now redirects to the Home page.
+4. Update Profile is now connected to a working backend action.
+5. Profile updates also sync linked donation records (name/email/phone) for that logged-in user.
+6. Registration now saves phone number.
+7. Donation proof upload form now uses multipart/form-data.
+
+HOW TO APPLY
+Option A: Fresh setup
+- Import e_comm.sql
+- Run the project
+
+Option B: Existing database with old users table
+- Run users_profile_migration.sql
+- Replace project files with the updated zip contents
+
+MAIN UPDATED FILES
+- actions/login_action.php
+- actions/register_action.php
+- actions/update_profile.php
+- donate.php
+- includes/functions.php
+- user/dashboard.php
+- e_comm.sql
+- users_profile_migration.sql
